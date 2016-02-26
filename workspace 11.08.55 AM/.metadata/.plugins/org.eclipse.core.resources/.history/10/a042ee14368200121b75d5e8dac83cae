@@ -1,0 +1,285 @@
+
+package com.atikspart.game;
+
+import java.util.Random;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class Identify extends Activity //implements View.OnClickListener
+{
+	int min;
+
+	int nos[]=new int[26];
+	TextView ques;
+	ImageView opt1,opt2,opt3,opt4;
+	Random r1=new Random();
+	boolean st=false;
+
+	@Override
+
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	
+		setContentView(R.layout.identify);
+/*
+		ques=(TextView)findViewById(R.id.imageView1);
+	
+		opt1=(ImageView)findViewById(R.id.iAOpt1);
+		opt2=(ImageView)findViewById(R.id.iAOpt2);
+		opt3=(ImageView)findViewById(R.id.iAOpt3);
+		opt4=(ImageView)findViewById(R.id.iAOpt4);
+		
+	
+		
+		nos[0]=generateRandom(26);
+		changeImage(opt1,nos[0]);
+		int temp;
+		
+		
+		do
+		{
+		temp=generateRandom(26);
+		}while(temp==nos[0]);
+		
+		changeImage(opt2,temp);
+		nos[1]=temp;
+		
+		do
+		{
+		temp=generateRandom(26);
+		}while(temp==nos[0]||temp==nos[1]);
+		
+		changeImage(opt3,temp);
+		nos[2]=temp;
+		
+
+		do
+		{
+		temp=generateRandom(26);
+		}while(temp==nos[0]||temp==nos[1]||temp==nos[2]);
+		
+		changeImage(opt4,temp);
+		nos[3]=temp;
+		
+	/*
+		min=nos[0];
+		if (nos[1]<min)
+			min=nos[1];
+		if (nos[2]<min)
+			min=nos[2];
+		if (nos[3]<min)
+			min=nos[3];
+		
+		
+		opt1.setOnClickListener(this);
+		opt2.setOnClickListener(this);		
+		opt3.setOnClickListener(this);
+		opt4.setOnClickListener(this);
+		
+		*/
+	
+	}//end func protected
+
+	public int generateRandom(int re)
+	{
+		return (r1.nextInt(re));	
+	}
+	
+	public void changeImage(ImageView rs,int sp)
+	{
+		switch (sp)
+		{	
+		case 0:
+		{
+			rs.setImageResource(R.drawable.a);
+			break;
+		}
+		case 1:
+		{
+			rs.setImageResource(R.drawable.b);
+			break;
+		}
+		case 2:
+		{
+			rs.setImageResource(R.drawable.c);
+			break;
+		}
+		case 3:
+		{
+			rs.setImageResource(R.drawable.d);
+			break;
+		}
+		case 4:
+		{
+			rs.setImageResource(R.drawable.e);
+			break;
+		}
+		case 5:
+		{
+			rs.setImageResource(R.drawable.f);
+			break;
+		}
+		case 6:
+		{
+			rs.setImageResource(R.drawable.g);
+			break;
+		}
+		case 7:
+		{
+			rs.setImageResource(R.drawable.h);
+			break;
+		}
+		case 8:
+		{
+			rs.setImageResource(R.drawable.i);
+			break;
+		}
+		case 9:
+		{
+			rs.setImageResource(R.drawable.j);
+			break;
+		}
+		case 10:
+		{
+			rs.setImageResource(R.drawable.k);
+			break;
+		}
+		case 11:
+		{
+			rs.setImageResource(R.drawable.l);
+			break;
+		}
+		case 12:
+		{
+			rs.setImageResource(R.drawable.m);
+			break;
+		}
+		case 13:
+		{
+			rs.setImageResource(R.drawable.n);
+			break;
+		}
+		case 14:
+		{
+			rs.setImageResource(R.drawable.o);
+			break;
+		}
+		case 15:
+		{
+			rs.setImageResource(R.drawable.p);
+			break;
+		}
+		case 16:
+		{
+			rs.setImageResource(R.drawable.q);
+			break;
+		}
+		case 17:
+		{
+			rs.setImageResource(R.drawable.r);
+			break;
+		}
+		case 18:
+		{
+			rs.setImageResource(R.drawable.s);
+			break;
+		}
+		case 19:
+		{
+			rs.setImageResource(R.drawable.t);
+			break;
+		}
+		case 20:
+		{
+			rs.setImageResource(R.drawable.u);
+			break;
+		}
+
+		case 21:
+		{
+			rs.setImageResource(R.drawable.v);
+			break;
+		}
+		case 22:
+		{
+			rs.setImageResource(R.drawable.w);
+			break;
+		}
+		case 23:
+		{
+			rs.setImageResource(R.drawable.x);
+			break;
+		}
+		case 24:
+		{
+			rs.setImageResource(R.drawable.y);
+			break;
+		}
+		case 25:
+		{
+			rs.setImageResource(R.drawable.z);
+			break;
+		}
+		}		
+	}
+/*
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch(v.getId()){
+		case (R.id.iSOpt1):
+		{
+			if(nos[0]==min){
+				ques.setText("correct");
+				st=true;
+			}
+			else
+				ques.setText("oops");
+			break;
+		}
+		case (R.id.iSOpt2):
+		{
+			if(nos[1]==min){
+				ques.setText("correct");
+				st=true;
+			}
+			else
+				ques.setText("oops");
+			break;
+		}
+		case (R.id.iSOpt3):
+		{
+			if(nos[2]==min){
+				ques.setText("correct");
+				st=true;
+			}
+			else
+				ques.setText("oops");
+			break;
+		}
+		case (R.id.iSOpt4):
+		{
+			if(nos[3]==min){
+				ques.setText("correct");
+				st=true;
+			}
+			else
+				ques.setText("oops");
+			break;
+		}
+		
+		}
+	}
+	
+*/
+
+	
+	
+	
+}

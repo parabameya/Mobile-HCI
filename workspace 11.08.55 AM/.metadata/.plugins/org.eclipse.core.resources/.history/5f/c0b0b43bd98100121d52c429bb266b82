@@ -1,0 +1,39 @@
+package com.atikspart.game;
+
+import java.util.Random;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class FindTheLargest extends Activity{
+
+	TextView ques;
+	ImageView opt1,opt2,opt3,opt4;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		ques=(TextView)findViewById(R.id.tVQues);
+		opt1=(ImageView)findViewById(R.id.iVOpt1);
+		opt2=(ImageView)findViewById(R.id.iVOpt2);
+		opt3=(ImageView)findViewById(R.id.iVOpt3);
+		opt4=(ImageView)findViewById(R.id.iVOpt4);
+		String numRes[]={"n1","n2","n3","n4","n5","n6","n7","n8"};
+		Random r1=new Random();
+		opt1.setImageResource(R.drawable.numRes[r1.nextInt(7)]);
+
+		opt1.setBackgroundResource(numRes[r1.nextInt(7)]);
+		opt1.setBackgroundResource(numRes[r1.nextInt(7)]);
+		
+		
+		numRes[r1.nextInt(7)]
+		
+		
+		
+	
+	}
+
+}

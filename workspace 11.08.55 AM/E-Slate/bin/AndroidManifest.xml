@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e_slate"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.e_slate.Start"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.e_slate.Start" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.e_slate.AbcdList"
+            android:label="@string/app_name" 
+            android:theme="@android:style/Theme.Dialog">
+            <intent-filter>
+                <action android:name="com.e_slate.AbcdList" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           <activity
+            android:name="com.e_slate.Listening"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.Listening" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.e_slate.Drawing"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.Drawing" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    
+         <activity
+            android:name="com.e_slate.Alphabet_songs"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.Alphabet_songs" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="com.e_slate.Draw"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.Draw" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.e_slate.SwitcherActivity"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.SwitcherActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name="com.e_slate.SvExample"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.SvExample" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
+           <activity
+            android:name="com.e_slate.addition_show"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.addition_show" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+           <activity
+            android:name="com.e_slate.Ra"
+            android:label="@string/app_name" 
+            >
+            <intent-filter>
+                <action android:name="com.e_slate.Ra" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+          
+    </application>
+
+</manifest>

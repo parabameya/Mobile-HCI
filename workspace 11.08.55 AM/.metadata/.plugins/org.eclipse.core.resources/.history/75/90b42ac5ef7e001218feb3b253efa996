@@ -1,0 +1,187 @@
+package com.atikspart.game;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.BitmapFactory.Options;
+import android.graphics.Canvas;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
+import android.view.View;
+import android.view.View.OnTouchListener;
+
+public class Match extends Activity implements OnTouchListener {
+	OurView v;
+	Bitmap l1,l2,l3,r1,r2,r3;
+	float x, y;
+	boolean init=true;
+	boolean l1touch=false,l2touch=false,l3touch=false;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		v = new OurView(this);
+		v.setOnTouchListener(this);
+		x = y = 0;
+		setContentView(v);
+
+	}
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		v.pause();
+	}
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		v.resume();
+	}
+	
+	@Override
+	public boolean onTouch(View vi, MotionEvent me) {
+		// TODO Auto-generated method stub
+		x=me.getX();
+		y=me.getY();
+		init=false;
+		return true;
+	}
+
+	class OurView extends SurfaceView implements Runnable {
+
+		Thread t = null;
+		SurfaceHolder holder;
+		boolean ok = false;
+
+		public OurView(Context context) {
+			// TODO Auto-generted constructor stub
+			super(context);
+			holder = getHolder();
+		}
+
+		@Override
+		public void run() {
+			
+			while (ok == true) {
+				if (!holder.getSurface().isValid()) {
+					continue;
+				}
+				Canvas c = holder.lockCanvas();
+				c.drawRGB(128,128,128);
+				if(init){
+				l1 = BitmapFactory.decodeResource(getResources(), R.drawable .aa);
+				c.drawBitmap(l1,50 ,100  ,
+						null);
+				l2 = BitmapFactory.decodeResource(getResources(), R.drawable .bb);
+				c.drawBitmap(l2,50 ,200  ,
+						null);
+				l3 = BitmapFactory.decodeResource(getResources(), R.drawable .cc);
+				c.drawBitmap(l3,50 ,300  ,
+						null);
+				r1 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+				c.drawBitmap(r1,350 ,100  ,
+						null);
+				r2 = BitmapFactory.decodeResource(getResources(), R.drawable .b);
+				c.drawBitmap(r2,350 ,200  ,
+						null);
+				r3 = BitmapFactory.decodeResource(getResources(), R.drawable .c);
+				c.drawBitmap(r3,350 ,300  ,
+						null);
+				}else{
+                if(x>=50 && x<=100 && y>=100 && y<=150){
+                l1 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+				c.drawBitmap(l1, x -(l1.getWidth()/2), y-(l1.getHeight()/2) ,
+						null);
+				l2 = BitmapFactory.decodeResource(getResources(), R.drawable .bb);
+				c.drawBitmap(l2,50 ,200  ,
+						null);
+				l3 = BitmapFactory.decodeResource(getResources(), R.drawable .cc);
+				c.drawBitmap(l3,50 ,300  ,
+						null);
+				r1 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+				c.drawBitmap(r1,350 ,100  ,
+						null);
+				r2 = BitmapFactory.decodeResource(getResources(), R.drawable .b);
+				c.drawBitmap(r2,350 ,200  ,
+						null);
+				r3 = BitmapFactory.decodeResource(getResources(), R.drawable .c);
+				c.drawBitmap(r3,350 ,300  ,
+						null);
+                }
+                if(x>=50 && x<=100 && y>=200 && y<=250){
+                    l2 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+    				c.drawBitmap(l2, x -(l2.getWidth()/2), y-(l2.getHeight()/2) ,
+    						null);
+    				l1 = BitmapFactory.decodeResource(getResources(), R.drawable .bb);
+    				c.drawBitmap(l2,50 ,100  ,
+    						null);
+    				l3 = BitmapFactory.decodeResource(getResources(), R.drawable .cc);
+    				c.drawBitmap(l3,50 ,300  ,
+    						null);
+    				r1 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+    				c.drawBitmap(r1,350 ,100  ,
+    						null);
+    				r2 = BitmapFactory.decodeResource(getResources(), R.drawable .b);
+    				c.drawBitmap(r2,350 ,200  ,
+    						null);
+    				r3 = BitmapFactory.decodeResource(getResources(), R.drawable .c);
+    				c.drawBitmap(r3,350 ,300  ,
+    						null);
+                    }
+                if(x>=50 && x<=100 && y>=300 && y<=350){
+                    l3 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+    				c.drawBitmap(l3, x -(l3.getWidth()/2), y-(l3.getHeight()/2) ,
+    						null);
+    				l2 = BitmapFactory.decodeResource(getResources(), R.drawable .bb);
+    				c.drawBitmap(l2,50 ,200  ,
+    						null);
+    				l1 = BitmapFactory.decodeResource(getResources(), R.drawable .cc);
+    				c.drawBitmap(l1,50 ,100  ,
+    						null);
+    				r1 = BitmapFactory.decodeResource(getResources(), R.drawable .a);
+    				c.drawBitmap(r1,350 ,100  ,
+    						null);
+    				r2 = BitmapFactory.decodeResource(getResources(), R.drawable .b);
+    				c.drawBitmap(r2,350 ,200  ,
+    						null);
+    				r3 = BitmapFactory.decodeResource(getResources(), R.drawable .c);
+    				c.drawBitmap(r3,350 ,300  ,
+    						null);
+                    }
+				}
+				holder.unlockCanvasAndPost(c);
+
+			}
+
+		}
+
+		public void pause() {
+			ok = false;
+			while (true) {
+				try {
+					t.join();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				break;
+			}
+			t = null;
+		}
+
+		public void resume() {
+			ok = true;
+			t = new Thread(this);
+			t.start();
+			
+		}
+	}
+
+	}

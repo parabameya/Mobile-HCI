@@ -1,0 +1,96 @@
+package com.atikspart.game;
+
+import java.util.Random;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class FindTheLargest extends Activity{
+
+	TextView ques;
+	ImageView opt1,opt2,opt3,opt4;
+	Random r1=new Random();
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		ques=(TextView)findViewById(R.id.tVQues);
+		opt1=(ImageView)findViewById(R.id.iVOpt1);
+		opt2=(ImageView)findViewById(R.id.iVOpt2);
+		opt3=(ImageView)findViewById(R.id.iVOpt3);
+		opt4=(ImageView)findViewById(R.id.iVOpt4);
+		String numRes[]={"n1","n2","n3","n4","n5","n6","n7","n8"};
+		
+		setImageAtRuntime(opt1,generateRandomNo());
+		setImageAtRuntime(opt2,generateRandomNo());
+		setImageAtRuntime(opt3,generateRandomNo());
+		setImageAtRuntime(opt4,generateRandomNo());
+		
+		
+		
+	}
+
+	public int generateRandomNo()
+	{
+		return r1.nextInt(8);		
+	}
+	
+	public void setImageAtRuntime(ImageView rs,int temp)
+	{
+		switch (temp)
+		{
+		case 1:
+		{
+			rs.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 2:
+		{
+			rs.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 3:
+		{
+			rs.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 4:
+		{
+			rs.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 5:
+		{
+			rs.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 6:
+		{
+			rs.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 7:
+		{
+			rs.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 8:
+		{
+			rs.setImageResource(R.drawable.n8);
+			break;
+		}
+		
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+}

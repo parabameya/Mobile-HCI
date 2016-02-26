@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/addfinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="77dp"
+        android:layout_y="39dp"
+        android:text="Add the Numbers"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/ans1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="18dp"
+        android:layout_y="412dp"
+        android:text="ANS 1" />
+
+    <Button
+        android:id="@+id/ans2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="94dp"
+        android:layout_y="412dp"
+        android:text="ANS 2" />
+
+    <Button
+        android:id="@+id/ans3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="168dp"
+        android:layout_y="412dp"
+        android:text="ANS 3" />
+
+    <Button
+        android:id="@+id/ans4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="241dp"
+        android:layout_y="412dp"
+        android:text="ANS 4" />
+
+    <ImageView
+        android:id="@+id/sub_exec_im1"
+        android:layout_width="111dp"
+        android:layout_height="194dp"
+        android:layout_x="28dp"
+        android:layout_y="124dp" />
+
+    <ImageView
+        android:id="@+id/add_exec_im2"
+        android:layout_width="111dp"
+        android:layout_height="194dp"
+        android:layout_x="162dp"
+        android:layout_y="124dp" />
+
+</AbsoluteLayout>

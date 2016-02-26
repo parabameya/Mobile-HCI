@@ -1,0 +1,37 @@
+package com.e_slate;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+public class Ra extends Activity {
+
+	Bitmap b1,b2;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		
+		setContentView(R.layout.drawalpha);
+
+		
+        RelativeLayout ll = (RelativeLayout)findViewById(R.id.ll1);
+        DrawView drawingPanel = new DrawView(getApplicationContext());
+        
+        RelativeLayout childLayout = new RelativeLayout(this);
+
+        childLayout.addView(drawingPanel);   
+       
+        ll.addView(childLayout);      
+
+       ll.getChildAt(1).setOnTouchListener(drawingPanel); 
+      /* ll.setFocusable(true);
+        ll.setFocusableInTouchMode(true);
+        ll.setOnTouchListener(drawingPanel);
+*/
+	}
+
+}

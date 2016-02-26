@@ -1,0 +1,223 @@
+package com.atikspart.game;
+
+import java.util.Random;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class FindTheLargest extends Activity{
+
+	TextView ques;
+	ImageView opt1,opt2,opt3,opt4;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	
+		
+	/*	
+		
+	
+		ques=(TextView)findViewById(R.id.tVQues);
+		opt1=(ImageView)findViewById(R.id.iVOpt1);
+		opt2=(ImageView)findViewById(R.id.iVOpt2);
+		opt3=(ImageView)findViewById(R.id.iVOpt3);
+		opt4=(ImageView)findViewById(R.id.iVOpt4);
+		Random r1=new Random();
+	
+	
+		
+		
+		
+		
+		// For selecting an image at runtime
+		switch (r1.nextInt(8))
+		{
+		case 1:
+		{
+			opt1.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 2:
+		{
+			opt1.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 3:
+		{
+			opt1.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 4:
+		{
+			opt1.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 5:
+		{
+			opt1.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 6:
+		{
+			opt1.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 7:
+		{
+			opt1.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 8:
+		{
+			opt1.setImageResource(R.drawable.n8);
+			break;
+		}
+		}
+		
+	
+//For second image
+		switch (r1.nextInt(8))
+		{
+		case 1:
+		{
+			opt2.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 2:
+		{
+			opt2.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 3:
+		{
+			opt2.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 4:
+		{
+			opt2.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 5:
+		{
+			opt2.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 6:
+		{
+			opt2.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 7:
+		{
+			opt2.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 8:
+		{
+			opt2.setImageResource(R.drawable.n8);
+			break;
+		}
+		}
+		
+//For third image
+		switch (r1.nextInt(8))
+		{
+		case 1:
+		{
+			opt3.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 2:
+		{
+			opt3.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 3:
+		{
+			opt3.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 4:
+		{
+			opt3.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 5:
+		{
+			opt3.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 6:
+		{
+			opt3.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 7:
+		{
+			opt3.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 8:
+		{
+			opt3.setImageResource(R.drawable.n8);
+			break;
+		}
+		}
+		
+		
+//For fourth image
+		switch (r1.nextInt(8))
+		{
+		case 1:
+		{
+			opt4.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 2:
+		{
+			opt4.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 3:
+		{
+			opt4.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 4:
+		{
+			opt4.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 5:
+		{
+			opt4.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 6:
+		{
+			opt4.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 7:
+		{
+			opt4.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 8:
+		{
+			opt4.setImageResource(R.drawable.n8);
+			break;
+		}
+	
+		}//end switch		
+	
+	*/
+	
+	}
+	
+}

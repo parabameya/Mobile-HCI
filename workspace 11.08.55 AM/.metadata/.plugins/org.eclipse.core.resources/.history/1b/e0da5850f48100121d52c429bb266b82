@@ -1,0 +1,141 @@
+package com.atikspart.game;
+
+import java.util.Random;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class FindTheLargest extends Activity{
+
+	TextView ques;
+	ImageView opt1,opt2,opt3,opt4;
+	Random r1=new Random();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.findthelargest);
+		
+		
+	/*
+		LinearLayout layout = (LinearLayout)findViewById(R.id.linearLayout1);
+		
+		ImageView imageView1 = new ImageView(this);
+		
+		imageView1.setId();
+		
+		imageView1.setImageResource(R.drawable.n3);
+		layout.addView(imageView1);
+*/
+		
+		
+		
+		
+		
+	
+		ques=(TextView)findViewById(R.id.tVQues);
+	
+		
+	opt1=(ImageView)findViewById(R.id.iVOpt1);
+	opt2=(ImageView)findViewById(R.id.iVOpt2);
+		opt3=(ImageView)findViewById(R.id.iVOpt3);
+		opt4=(ImageView)findViewById(R.id.iVOpt4);
+		
+	
+		Integer nos[]=new Integer[4];
+		
+		nos[0]=generateRandom();
+		changeImage(opt1,nos[0]);
+		int temp;
+		
+		
+		do
+		{
+		temp=generateRandom();
+		}while(temp!=nos[0]);
+		
+		changeImage(opt2,temp);
+		nos[1]=temp;
+		
+		do
+		{
+		temp=generateRandom();
+		}while(temp!=nos[0]&&temp!=nos[1]);
+		
+		changeImage(opt3,temp);
+		nos[2]=temp;
+		
+
+		do
+		{
+		temp=generateRandom();
+		}while(temp!=nos[0]&&temp!=nos[1]&&temp!=nos[2]);
+		
+		changeImage(opt4,temp);
+		nos[3]=temp;
+		
+		
+		
+	}
+
+	public int generateRandom()
+	{
+		return r1.nextInt(7);
+		
+	}
+	
+	public void changeImage(ImageView rs,int sp)
+	{
+		switch (sp)
+		{	
+		case 0:
+		{
+			opt4.setImageResource(R.drawable.n1);
+			break;
+		}
+		case 1:
+		{
+			opt4.setImageResource(R.drawable.n2);
+			break;
+		}
+		case 2:
+		{
+			opt4.setImageResource(R.drawable.n3);
+			break;
+		}
+		case 3:
+		{
+			opt4.setImageResource(R.drawable.n4);
+			break;
+		}
+		case 4:
+		{
+			opt4.setImageResource(R.drawable.n5);
+			break;
+		}
+		case 5:
+		{
+			opt4.setImageResource(R.drawable.n6);
+			break;
+		}
+		case 6:
+		{
+			opt4.setImageResource(R.drawable.n7);
+			break;
+		}
+		case 7:
+		{
+			opt4.setImageResource(R.drawable.n8);
+			break;
+		}
+	
+		}		
+	
+		
+	}
+	
+	
+}
